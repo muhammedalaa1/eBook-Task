@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "bin",
+    "target": "ES6",
+    "resolveJsonModule": true,
+    "lib": ["ES2021"]
+  }
+}
