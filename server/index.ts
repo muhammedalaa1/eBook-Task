@@ -20,7 +20,10 @@ app.disable("x-powered-by");
 // Connect to DB
 connectDB();
 // Cross Origin Resource Sharing
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://e-book-task.vercel.app/",
+];
 
 app.use(
   cors({
