@@ -37,7 +37,12 @@ const Home = () => {
         {filteredBooks.map((book) => (
           <div key={book._id}>
             <div className="h-[300px]">
-              <img src={book.image.url} alt="" className="h-full" />
+              <img
+                src={book.image.url}
+                alt="image"
+                className="h-full"
+                loading="lazy"
+              />
             </div>
             <div className="text-center mt-4">
               <h1>{book.name}</h1>
