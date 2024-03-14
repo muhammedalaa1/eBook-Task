@@ -41,7 +41,7 @@ function App() {
         <Route
           path="/signup"
           element={
-            <Protect destination="signup">
+            <Protect protect destination="signup">
               <Signup />
             </Protect>
           }
