@@ -22,7 +22,7 @@ connectDB();
 // Cross Origin Resource Sharing
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://e-book-task.vercel.app/",
+  "https://e-book-task.vercel.app",
   "https://ebook-task.onrender.com/",
 ];
 
