@@ -1,9 +1,9 @@
 {
   "name": "server",
   "module": "index.ts",
-  "main": "./dist/index.js",
+  "main": "./bin/index.js",
   "scripts": {
-    "start": "node ./dist/index.js",
+    "start": "node ./bin/index.js",
     "build": "tsc",
     "dev": "nodemon index.ts"
   },
