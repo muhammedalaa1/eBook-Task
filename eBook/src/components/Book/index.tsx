@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../../utils/api";
 import { useParams } from "react-router-dom";
-import { Book } from "../../context/Auth";
+import { type Book } from "../../context/Auth";
 import { ClipLoader } from "react-spinners";
 const Book = () => {
   const [book, setBook] = useState<Book>();

@@ -34,7 +34,6 @@ const AddBook = () => {
       notifyAdd("Added Successfully");
     } catch (error) {
       console.log(error);
-      // notifyError("Something Wrong happened");
     } finally {
       setloading((prev) => !prev);
     }
