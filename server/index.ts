@@ -23,6 +23,7 @@ connectDB();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://e-book-task.vercel.app/",
+  "https://ebook-task.onrender.com/",
 ];
 
 app.use(
