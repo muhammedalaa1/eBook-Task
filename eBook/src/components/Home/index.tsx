@@ -6,6 +6,7 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 const Home = () => {
   const { AllBooks } = useAuth();
   const [selectedCategory, setSelectedCategory] = useState("All");
+
   const categories = ["Science", "Comedy", "Thriller"];
   const filteredBooks =
     selectedCategory === "All"
@@ -14,7 +15,7 @@ const Home = () => {
 
   return (
     <div className="container mt-12 flex justify-center flex-col items-center gap-12">
-      <FormControl className="w-1/4 mt-4 md:z-0 -z-30">
+      <FormControl className={`w-1/4 mt-4 sm:z-0`}>
         <InputLabel id="demo-simple-select-label">Category</InputLabel>
         <Select
           name="category"

@@ -31,7 +31,7 @@ const Nav: React.FC = () => {
   const [navbar, setNavbar] = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
-
+  console.log(user);
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
       if (
@@ -95,14 +95,25 @@ const Nav: React.FC = () => {
           </ul>
           <div className="ml-12 flex flex-col justify-end h-[80%]">
             <div className="flex items-center gap-2">
-              <Profile />
-              <h3>{user?.userName}</h3>
-              <button
-                className="bg-mainColor border-2 loginBtn  border-mainColor hover:bg-white hover:text-mainColor/90 text-white rounded-md duration-300 transition-colors p-2 mt-4"
-                onClick={logout}
-              >
-                Logout
-              </button>
+              {!user ? (
+                <Link to={"/login"}>
+                  <button className="bg-mainColor border-2 loginBtn  border-mainColor hover:bg-white hover:text-mainColor/90 text-white rounded-md duration-300 transition-colors p-2 mt-4">
+                    login
+                  </button>
+                </Link>
+              ) : (
+                <div>
+                  {" "}
+                  <Profile />
+                  <h3>{user?.userName}</h3>
+                  <button
+                    className="bg-mainColor border-2 loginBtn  border-mainColor hover:bg-white hover:text-mainColor/90 text-white rounded-md duration-300 transition-colors p-2 mt-4"
+                    onClick={logout}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

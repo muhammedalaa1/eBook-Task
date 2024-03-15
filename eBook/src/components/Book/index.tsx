@@ -33,7 +33,7 @@ const Book = () => {
               </h3>
               <object
                 data={book?.file.url}
-                type=""
+                type="application/pdf"
                 className="w-full h-screen"
               ></object>
             </div>
