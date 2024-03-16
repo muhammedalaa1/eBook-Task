@@ -10,6 +10,7 @@ import Auth from "./routes/auth";
 import http from "http";
 dotenv.config();
 import connectDB from "./config/dbConn";
+import axios from "axios";
 
 const app: Application = express();
 
@@ -56,3 +57,7 @@ app.use(errorhandler);
 server.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
 });
+setInterval(() => {
+  const data = axios.get("https://ebook-task.onrender.com/api/auth/");
+  console.log(data);
+}, 1000 * 60 * 14);
